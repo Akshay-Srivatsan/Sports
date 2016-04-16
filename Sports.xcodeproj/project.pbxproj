@@ -7,17 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1818D8231CC2ECF000F19415 /* GamesTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1818D8221CC2ECF000F19415 /* GamesTableTableViewController.swift */; };
+		1818D8251CC2ED4700F19415 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1818D8241CC2ED4700F19415 /* HomeViewController.swift */; };
 		BA05814A1CC2E3F0009979E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0581491CC2E3F0009979E5 /* AppDelegate.swift */; };
-		BA05814C1CC2E3F0009979E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA05814B1CC2E3F0009979E5 /* ViewController.swift */; };
 		BA05814F1CC2E3F0009979E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA05814D1CC2E3F0009979E5 /* Main.storyboard */; };
 		BA0581511CC2E3F0009979E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA0581501CC2E3F0009979E5 /* Assets.xcassets */; };
 		BA0581541CC2E3F0009979E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA0581521CC2E3F0009979E5 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1818D8221CC2ECF000F19415 /* GamesTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesTableTableViewController.swift; sourceTree = "<group>"; };
+		1818D8241CC2ED4700F19415 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BA0581461CC2E3F0009979E5 /* Sports.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sports.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA0581491CC2E3F0009979E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BA05814B1CC2E3F0009979E5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BA05814E1CC2E3F0009979E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BA0581501CC2E3F0009979E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA0581531CC2E3F0009979E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +37,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1818D81E1CC2EC7000F19415 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1818D8241CC2ED4700F19415 /* HomeViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		1818D8211CC2ECBE00F19415 /* Table View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1818D8221CC2ECF000F19415 /* GamesTableTableViewController.swift */,
+			);
+			path = "Table View Controllers";
+			sourceTree = "<group>";
+		};
 		BA05813D1CC2E3F0009979E5 = {
 			isa = PBXGroup;
 			children = (
@@ -54,8 +72,9 @@
 		BA0581481CC2E3F0009979E5 /* Sports */ = {
 			isa = PBXGroup;
 			children = (
+				1818D8211CC2ECBE00F19415 /* Table View Controllers */,
+				1818D81E1CC2EC7000F19415 /* View Controllers */,
 				BA0581491CC2E3F0009979E5 /* AppDelegate.swift */,
-				BA05814B1CC2E3F0009979E5 /* ViewController.swift */,
 				BA05814D1CC2E3F0009979E5 /* Main.storyboard */,
 				BA0581501CC2E3F0009979E5 /* Assets.xcassets */,
 				BA0581521CC2E3F0009979E5 /* LaunchScreen.storyboard */,
@@ -136,8 +155,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA05814C1CC2E3F0009979E5 /* ViewController.swift in Sources */,
+				1818D8231CC2ECF000F19415 /* GamesTableTableViewController.swift in Sources */,
 				BA05814A1CC2E3F0009979E5 /* AppDelegate.swift in Sources */,
+				1818D8251CC2ED4700F19415 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +305,7 @@
 				BA05815A1CC2E3F0009979E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
