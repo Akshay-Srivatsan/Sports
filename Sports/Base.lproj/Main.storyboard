@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Home View Controller-->
@@ -52,13 +53,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="805-bu-NFH">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="gameCell" id="805-bu-NFH" customClass="GamesTableViewCell" customModule="Sports" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="805-bu-NFH" id="k6x-0a-jY9">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Games" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktB-N0-qu7">
+                                            <rect key="frame" x="60" y="8" width="481" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ktB-N0-qu7" firstAttribute="top" secondItem="k6x-0a-jY9" secondAttribute="topMargin" id="5PB-zq-Io3"/>
+                                        <constraint firstItem="ktB-N0-qu7" firstAttribute="leading" secondItem="k6x-0a-jY9" secondAttribute="leadingMargin" constant="52" id="RhW-1g-Ajq"/>
+                                        <constraint firstItem="ktB-N0-qu7" firstAttribute="centerX" secondItem="k6x-0a-jY9" secondAttribute="centerX" id="cD3-ze-EaX"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="ktB-N0-qu7" secondAttribute="bottom" constant="3" id="clX-Cl-CiS"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="gameLabel" destination="ktB-N0-qu7" id="if3-zA-9So"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
