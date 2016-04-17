@@ -108,6 +108,7 @@ class GamesTableTableViewController: UITableViewController
             let destVC = segue.destinationViewController as! GameFeedTableViewController
             //destVC.whichSport = whichSport
             destVC.eventId = Array(gameData!.keys)[segueRow!]
+            destVC.whichSport = whichSport;
         }
     }
 

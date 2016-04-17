@@ -12,7 +12,7 @@ class GameFeedTableViewController: UITableViewController
 {
     @IBOutlet var table_view: UITableView!
 
-    //var whichSport: String?
+    var whichSport: String?
     var jsonInfo: [AnyObject]?
     var eventId: String?
     var segueRow: Int?
@@ -83,7 +83,7 @@ class GameFeedTableViewController: UITableViewController
         {
             // do something with dest view controller and html and the jsonInfo "title"
             let destVC = segue.destinationViewController as! WebViewController
-            destVC.html = ESPN.addLinks((jsonInfo![segueRow!]["title"] as? String)!)
+            destVC.html = ESPN.addLinks(whichSport!, inputText: (jsonInfo![segueRow!]["title"] as? String)!)
         }
     }
     
