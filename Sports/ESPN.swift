@@ -89,17 +89,41 @@ class ESPN {
         }).resume()
     }
     
-    static func addLinks(sport: String, inputText: String) -> String {
+    static func addLinks(inputText: String) -> String {
         var text = inputText;
-        for term in terms {
-            if (text.lowercaseString.containsString(term.lowercaseString)) {
-                let rawTerm = text.substringWithRange(text.lowercaseString.rangeOfString(term.lowercaseString)!)
-                let html = "<a href=\"\(term)\">\(rawTerm)</a>"
-                text.replaceRange(text.lowercaseString.rangeOfString(term.lowercaseString)!, with: html)
+        var retval = "";
+        while text != "" {
+            var matched = false;
+            print(text)
+            for term in terms {
+                let matchRange = text.lowercaseString.rangeOfString(term.lowercaseString)
+                if matchRange?.startIndex == text.startIndex {
+                    if (matchRange?.endIndex != text.endIndex && text[matchRange!.endIndex] != " ") {
+                        continue
+                    }
+                    let rawTerm = text.substringWithRange(matchRange!)
+                    text.removeRange(matchRange!)
+                    text.removeRange(Range(start: text.startIndex, end: text.startIndex.successor()))
+                    let html = "<a href=\"\(term)\">\(rawTerm)</a>"
+                    retval += html
+                    matched = true
+                    break
+                }
+            }
+            print(matched)
+            if (!matched) {
+                if let nextSpace = text.rangeOfString(" ") {
+                    retval += text.substringToIndex(nextSpace.endIndex);
+                    text.removeRange(Range(start: text.startIndex, end: nextSpace.endIndex))
+                } else {
+                    retval += text
+                    text = ""
+                }
             }
         }
-        return text;
+        return retval;
     }
+
 
 
 }
