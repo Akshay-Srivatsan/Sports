@@ -47,12 +47,16 @@ class WebViewController: UIViewController, UIWebViewDelegate {
                     web_view.loadHTMLString(html!, baseURL: nil)
                 }
             }
-            if var newHTML = ESPN.getDescription("mlb", title: component) {
+            if var newHTML = ESPN.getDescription(HomeViewController.BASEBALL_ID, title: component) {
                 newHTML += "<br/><br/><a href=\"APEIRON_GO_BACK\">Go Back</a>"
                 history.append(html!)
                 html = newHTML
                 web_view.loadHTMLString(html!, baseURL: nil)
-            } else {
+            } else if var newHTML = ESPN.getDescription(HomeViewController.SOCCER_ID, title: component) {
+                newHTML += "<br/><br/><a href=\"APEIRON_GO_BACK\">Go Back</a>"
+                history.append(html!)
+                html = newHTML
+                web_view.loadHTMLString(html!, baseURL: nil)
 //                web_view.loadHTMLString("We do not have a definition for that at this time.", baseURL: nil)
             }
         }

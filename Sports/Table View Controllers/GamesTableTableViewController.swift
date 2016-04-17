@@ -13,7 +13,7 @@ class GamesTableTableViewController: UITableViewController
     @IBOutlet var table_view: UITableView!
     
     var gameData: [String: String]?
-    var whichSport: Int?
+    var whichSport: String?
     var segueRow: Int?
     
     override func viewDidLoad()
@@ -30,7 +30,14 @@ class GamesTableTableViewController: UITableViewController
             print(self.jsonInfo)
         }*/
         
-        ESPN.getCurrentGames("mlb", callback: cb)
+        if (whichSport == HomeViewController.BASEBALL_ID)
+        {
+            ESPN.getCurrentGames(HomeViewController.BASEBALL_ID, callback: cb)
+        }
+        else if (whichSport == HomeViewController.SOCCER_ID)
+        {
+            ESPN.getCurrentGames(HomeViewController.SOCCER_ID, callback: cb)
+        }
         
     }
     
@@ -97,7 +104,7 @@ class GamesTableTableViewController: UITableViewController
         if (segue.identifier == "showGameFeed")
         {
             let destVC = segue.destinationViewController as! GameFeedTableViewController
-            destVC.whichSport = whichSport
+            //destVC.whichSport = whichSport
             destVC.eventId = Array(gameData!.keys)[segueRow!]
         }
     }

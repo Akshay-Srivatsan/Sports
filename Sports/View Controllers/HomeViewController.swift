@@ -11,12 +11,18 @@ import UIKit
 class HomeViewController: UIViewController
 {
     
-    // Ids
-    static let BASEBALL_ID = 10
+    // Names
+    static let BASEBALL_ID = "mlb"
+    static let SOCCER_ID = "soccer"
     
     @IBAction func baseballButtonPressed(sender: AnyObject)
     {
-        performSegueWithIdentifier("showBaseball", sender: HomeViewController.self)
+        performSegueWithIdentifier("showBaseball", sender: self)
+    }
+    
+    @IBAction func soccerButtonPressed(sender: AnyObject)
+    {
+        performSegueWithIdentifier("showSoccer", sender: self)
     }
     
     override func viewDidLoad() {
@@ -42,6 +48,10 @@ class HomeViewController: UIViewController
         if (segue.identifier == "showBaseball")
         {
             destVC.whichSport = HomeViewController.BASEBALL_ID
+        }
+        else if (segue.identifier == "showSoccer")
+        {
+            destVC.whichSport = HomeViewController.SOCCER_ID
         }
     }
     
