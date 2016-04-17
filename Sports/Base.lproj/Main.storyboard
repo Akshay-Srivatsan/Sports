@@ -181,7 +181,7 @@
             </objects>
             <point key="canvasLocation" x="2559" y="286"/>
         </scene>
-        <!--Web View Controller-->
+        <!--Explanation-->
         <scene sceneID="iL9-7q-1YT">
             <objects>
                 <viewController id="Pj3-kA-3Gq" customClass="WebViewController" customModule="Sports" customModuleProvider="target" sceneMemberID="viewController">
@@ -194,18 +194,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BF9-yt-me1">
-                                <rect key="frame" x="0.0" y="28" width="600" height="572"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="BF9-yt-me1" firstAttribute="leading" secondItem="Mxw-Qw-yoE" secondAttribute="leading" id="Co2-lf-uSn"/>
-                            <constraint firstItem="BF9-yt-me1" firstAttribute="top" secondItem="9LX-Th-0HT" secondAttribute="bottom" constant="8" symbolic="YES" id="fff-TW-RtJ"/>
-                            <constraint firstItem="BF9-yt-me1" firstAttribute="bottom" secondItem="UCM-QZ-t4l" secondAttribute="top" id="tCR-BR-Txe"/>
-                            <constraint firstAttribute="trailing" secondItem="BF9-yt-me1" secondAttribute="trailing" id="uKe-Li-AjC"/>
+                            <constraint firstItem="BF9-yt-me1" firstAttribute="top" secondItem="Mxw-Qw-yoE" secondAttribute="top" id="R7X-mW-air"/>
+                            <constraint firstAttribute="trailing" secondItem="BF9-yt-me1" secondAttribute="trailing" id="Yg9-Cd-Pb1"/>
+                            <constraint firstItem="BF9-yt-me1" firstAttribute="bottom" secondItem="UCM-QZ-t4l" secondAttribute="top" id="eKV-hq-bR0"/>
+                            <constraint firstItem="BF9-yt-me1" firstAttribute="leading" secondItem="Mxw-Qw-yoE" secondAttribute="leading" id="ypu-DG-4XF"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Explanation" id="xgc-3R-7jx"/>
                     <connections>
                         <outlet property="web_view" destination="BF9-yt-me1" id="RRd-mh-JfY"/>
                     </connections>
