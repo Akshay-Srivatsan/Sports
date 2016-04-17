@@ -13,9 +13,7 @@ class GamesTableTableViewController: UITableViewController
     @IBOutlet var table_view: UITableView!
     
     var gameData: [String: String]?
-    
     var whichSport: Int?
-    
     var segueRow: Int?
     
     override func viewDidLoad()

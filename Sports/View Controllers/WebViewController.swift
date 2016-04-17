@@ -12,10 +12,14 @@ class WebViewController: UIViewController, UIWebViewDelegate {
 
     @IBOutlet weak var web_view: UIWebView!
     
+    var html: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        web_view.loadHTMLString(html!, baseURL: nil)
+        print(html!)
     }
 
     override func didReceiveMemoryWarning() {

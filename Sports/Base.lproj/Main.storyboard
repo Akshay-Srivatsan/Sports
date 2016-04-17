@@ -19,49 +19,67 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJh-2f-JzY">
-                                <rect key="frame" x="271" y="285" width="58" height="30"/>
+                                <rect key="frame" x="265" y="280" width="69" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="s1B-6X-LmA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Baseball"/>
                                 <connections>
                                     <action selector="baseballButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vn9-H4-odw"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Football" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53M-is-hzm">
-                                <rect key="frame" x="269" y="225" width="62" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="268" y="224" width="65" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="pit-0f-YMu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Basketball" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xo0-Y2-6pS">
-                                <rect key="frame" x="261" y="368" width="79" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="257" y="338" width="86" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="86" id="03M-5D-h3O"/>
+                                    <constraint firstAttribute="height" constant="21" id="6OH-2k-YSO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Soccer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Gb-nt-cus">
-                                <rect key="frame" x="273" y="447" width="54" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="270" y="396" width="61" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61" id="2uD-5h-8EU"/>
+                                    <constraint firstAttribute="height" constant="21" id="Pme-r7-Voq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sports Explainer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9F-if-9o5">
-                                <rect key="frame" x="237" y="97" width="126" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sports Buddy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9F-if-9o5">
+                                <rect key="frame" x="238" y="142" width="124" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="124" id="YDK-qf-vVY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="53M-is-hzm" firstAttribute="centerX" secondItem="fJh-2f-JzY" secondAttribute="centerX" id="3qJ-8E-8ZK"/>
-                            <constraint firstItem="i9F-if-9o5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6Zs-eE-gbD"/>
-                            <constraint firstItem="fJh-2f-JzY" firstAttribute="top" secondItem="53M-is-hzm" secondAttribute="bottom" constant="39" id="BDd-nT-IpZ"/>
-                            <constraint firstItem="xo0-Y2-6pS" firstAttribute="top" secondItem="fJh-2f-JzY" secondAttribute="bottom" constant="53" id="ESr-Oc-ELH"/>
-                            <constraint firstItem="2Gb-nt-cus" firstAttribute="top" secondItem="xo0-Y2-6pS" secondAttribute="bottom" constant="58" id="Gv7-uB-FCO"/>
-                            <constraint firstItem="xo0-Y2-6pS" firstAttribute="centerX" secondItem="fJh-2f-JzY" secondAttribute="centerX" id="HDG-Ls-8bc"/>
-                            <constraint firstItem="i9F-if-9o5" firstAttribute="centerX" secondItem="53M-is-hzm" secondAttribute="centerX" id="V8R-ui-E6y"/>
-                            <constraint firstItem="xo0-Y2-6pS" firstAttribute="centerX" secondItem="2Gb-nt-cus" secondAttribute="centerX" id="jcs-ld-Cht"/>
-                            <constraint firstItem="i9F-if-9o5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="77" id="sKS-W3-t1V"/>
-                            <constraint firstItem="fJh-2f-JzY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="u7V-As-2x8"/>
+                            <constraint firstItem="2Gb-nt-cus" firstAttribute="centerX" secondItem="xo0-Y2-6pS" secondAttribute="centerX" id="66P-Cw-hYb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2Gb-nt-cus" secondAttribute="bottom" constant="183" id="PY5-S1-m7L"/>
+                            <constraint firstItem="fJh-2f-JzY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YAo-zl-XIK"/>
+                            <constraint firstItem="53M-is-hzm" firstAttribute="top" secondItem="i9F-if-9o5" secondAttribute="bottom" constant="58" id="cEe-8N-vq5"/>
+                            <constraint firstItem="i9F-if-9o5" firstAttribute="centerX" secondItem="53M-is-hzm" secondAttribute="centerX" id="f2f-mx-LuI"/>
+                            <constraint firstItem="fJh-2f-JzY" firstAttribute="top" secondItem="53M-is-hzm" secondAttribute="bottom" constant="35" id="hMm-O4-yUe"/>
+                            <constraint firstItem="xo0-Y2-6pS" firstAttribute="centerX" secondItem="53M-is-hzm" secondAttribute="centerX" id="qSM-g6-v8a"/>
+                            <constraint firstItem="xo0-Y2-6pS" firstAttribute="top" secondItem="fJh-2f-JzY" secondAttribute="bottom" constant="28" id="tj0-IU-6Rf"/>
+                            <constraint firstItem="xo0-Y2-6pS" firstAttribute="centerX" secondItem="fJh-2f-JzY" secondAttribute="centerX" id="uA0-eh-JPy"/>
+                            <constraint firstItem="2Gb-nt-cus" firstAttribute="top" secondItem="xo0-Y2-6pS" secondAttribute="bottom" constant="37" id="zdO-0H-7Qv"/>
                         </constraints>
                     </view>
                     <connections>
@@ -76,7 +94,7 @@
         <scene sceneID="i6F-8X-bSB">
             <objects>
                 <tableViewController id="kbB-3C-10D" customClass="GamesTableTableViewController" customModule="Sports" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="wml-3W-WSQ">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="wml-3W-WSQ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -87,7 +105,7 @@
                                 <navigationItem title="Games" id="MUX-Lm-zIf" userLabel="Games">
                                     <barButtonItem key="leftBarButtonItem" title="Cancel" id="hDu-Ek-ePH">
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" identifier="showHomeVC" animates="NO" id="5NN-Ky-bCN"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="bR7-Yt-17R"/>
                                         </connections>
                                     </barButtonItem>
                                 </navigationItem>
@@ -95,24 +113,24 @@
                         </navigationBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="gameCell" id="805-bu-NFH" customClass="GamesTableViewCell" customModule="Sports" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="72" width="600" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="805-bu-NFH" id="k6x-0a-jY9">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="59"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Games" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktB-N0-qu7">
-                                            <rect key="frame" x="60" y="8" width="481" height="24"/>
+                                            <rect key="frame" x="8" y="8" width="584" height="43"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="ktB-N0-qu7" firstAttribute="top" secondItem="k6x-0a-jY9" secondAttribute="topMargin" id="5PB-zq-Io3"/>
-                                        <constraint firstItem="ktB-N0-qu7" firstAttribute="leading" secondItem="k6x-0a-jY9" secondAttribute="leadingMargin" constant="52" id="RhW-1g-Ajq"/>
-                                        <constraint firstItem="ktB-N0-qu7" firstAttribute="centerX" secondItem="k6x-0a-jY9" secondAttribute="centerX" id="cD3-ze-EaX"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="ktB-N0-qu7" secondAttribute="bottom" constant="3" id="clX-Cl-CiS"/>
+                                        <constraint firstItem="ktB-N0-qu7" firstAttribute="bottom" secondItem="k6x-0a-jY9" secondAttribute="bottomMargin" id="Cmi-4X-aEh"/>
+                                        <constraint firstItem="ktB-N0-qu7" firstAttribute="top" secondItem="k6x-0a-jY9" secondAttribute="topMargin" id="HWM-zK-vLq"/>
+                                        <constraint firstItem="ktB-N0-qu7" firstAttribute="leading" secondItem="k6x-0a-jY9" secondAttribute="leadingMargin" id="OrI-WR-4mk"/>
+                                        <constraint firstItem="ktB-N0-qu7" firstAttribute="trailing" secondItem="k6x-0a-jY9" secondAttribute="trailingMargin" id="jLz-sH-VRn"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -125,6 +143,8 @@
                             <outlet property="delegate" destination="kbB-3C-10D" id="Obx-P4-9W6"/>
                         </connections>
                     </tableView>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
                     <connections>
                         <outlet property="tableView" destination="wml-3W-WSQ" id="UiO-Tl-gA8"/>
                         <outlet property="table_view" destination="wml-3W-WSQ" id="7Nf-Pr-5mR"/>
@@ -150,27 +170,33 @@
                                 <navigationItem title="Game Feed" id="Lt7-bp-fwX">
                                     <barButtonItem key="leftBarButtonItem" title="Cancel" id="bkU-Cy-Vf1">
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" animates="NO" id="tfN-rz-Qrv"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="showHomeView" animates="NO" id="tfN-rz-Qrv"/>
                                         </connections>
                                     </barButtonItem>
                                 </navigationItem>
                             </items>
                         </navigationBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="gameFeedCell" id="cOV-Qx-K0o" customClass="GameFeedTableViewCell" customModule="Sports" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="gameFeedCell" rowHeight="60" id="cOV-Qx-K0o" customClass="GameFeedTableViewCell" customModule="Sports" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="600" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cOV-Qx-K0o" id="Xt9-Gj-h09">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="59"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Feed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cse-2X-LCa">
-                                            <rect key="frame" x="28" y="11" width="550" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cse-2X-LCa">
+                                            <rect key="frame" x="8" y="8" width="584" height="43"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="cse-2X-LCa" firstAttribute="top" secondItem="Xt9-Gj-h09" secondAttribute="topMargin" id="5aE-ua-WK9"/>
+                                        <constraint firstItem="cse-2X-LCa" firstAttribute="bottom" secondItem="Xt9-Gj-h09" secondAttribute="bottomMargin" id="IYN-aE-rRW"/>
+                                        <constraint firstItem="cse-2X-LCa" firstAttribute="trailing" secondItem="Xt9-Gj-h09" secondAttribute="trailingMargin" id="akE-gy-DhF"/>
+                                        <constraint firstItem="cse-2X-LCa" firstAttribute="leading" secondItem="Xt9-Gj-h09" secondAttribute="leadingMargin" id="hBa-eW-7KH"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="feedLabel" destination="cse-2X-LCa" id="bSz-Ra-1CC"/>
@@ -226,6 +252,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="tfN-rz-Qrv"/>
+        <segue reference="bR7-Yt-17R"/>
     </inferredMetricsTieBreakers>
 </document>
