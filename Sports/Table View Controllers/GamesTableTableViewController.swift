@@ -11,9 +11,7 @@ import UIKit
 class GamesTableTableViewController: UITableViewController
 {
     @IBOutlet var table_view: UITableView!
-    @IBOutlet var firstImageView: UIImageView!
-    @IBOutlet var secondImageView: UIImageView!
-    
+        
     var gameData: [String: String]?
     var whichSport: String?
     var segueRow: Int?
