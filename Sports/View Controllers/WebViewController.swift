@@ -25,8 +25,12 @@ class WebViewController: UIViewController, UIWebViewDelegate {
         // Do any additional setup after loading the view.
         html = STYLE + html!
         web_view.loadHTMLString(html!, baseURL: nil)
-        web_view.delegate = self;
-        //print(html!)
+        web_view.delegate = self;        //print(html!)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        web_view.backgroundColor = UIColor.init(red: 220/255.0, green: 102/255.0, blue: 101/255.0, alpha: 1)
+
     }
 
     override func didReceiveMemoryWarning() {
