@@ -13,6 +13,7 @@ class WebViewController: UIViewController, UIWebViewDelegate {
     @IBOutlet weak var web_view: UIWebView!
     
     var html: String?
+    var history: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,8 +41,17 @@ class WebViewController: UIViewController, UIWebViewDelegate {
     
     func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
         if let component = request.URL!.lastPathComponent {
-            if let html = ESPN.getDescription("mlb", title: component) {
-                web_view.loadHTMLString(html, baseURL: nil)
+            if component == "APEIRON_GO_BACK" {
+                if history.count > 0 {
+                    html = history.popLast()
+                    web_view.loadHTMLString(html!, baseURL: nil)
+                }
+            }
+            if var newHTML = ESPN.getDescription("mlb", title: component) {
+                newHTML += "<br/><br/><a href=\"APEIRON_GO_BACK\">Go Back</a>"
+                history.append(html!)
+                html = newHTML
+                web_view.loadHTMLString(html!, baseURL: nil)
             } else {
 //                web_view.loadHTMLString("We do not have a definition for that at this time.", baseURL: nil)
             }
