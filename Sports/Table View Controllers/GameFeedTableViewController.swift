@@ -16,11 +16,13 @@ class GameFeedTableViewController: UITableViewController
     var jsonInfo: [AnyObject]?
     var eventId: String?
     var segueRow: Int?
+    var timer = NSTimer()
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         ESPN.getJSONForEvent(eventId!, callback: cb)
+        timer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: Selector("reloadPlayByPlay"), userInfo: nil, repeats: true)
     }
     
     func cb(arr: [AnyObject]?)
@@ -30,6 +32,10 @@ class GameFeedTableViewController: UITableViewController
         {
             self.table_view.reloadData()
         }
+    }
+    
+    func reloadPlayByPlay() {
+        ESPN.getJSONForEvent(eventId!, callback: cb)
     }
 
     override func didReceiveMemoryWarning()
@@ -87,6 +93,7 @@ class GameFeedTableViewController: UITableViewController
             let destVC = segue.destinationViewController as! WebViewController
             destVC.html = ESPN.addLinks(whichSport!, inputText: (jsonInfo![segueRow!]["title"] as? String)!)
             destVC.whichSport = whichSport
+            destVC.title = "Info"
         }
     }
     

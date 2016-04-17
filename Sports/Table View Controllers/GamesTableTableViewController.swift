@@ -33,14 +33,17 @@ class GamesTableTableViewController: UITableViewController
         if (whichSport == HomeViewController.BASEBALL_ID)
         {
             ESPN.getCurrentGames(HomeViewController.BASEBALL_ID, callback: cb)
+            title = "Baseball"
         }
         else if (whichSport == HomeViewController.SOCCER_ID)
         {
             ESPN.getCurrentGames(HomeViewController.SOCCER_ID, callback: cb)
+            title = "Soccer"
         }
         else if (whichSport == HomeViewController.BASKETBALL_ID)
         {
             ESPN.getCurrentGames(HomeViewController.BASKETBALL_ID, callback: cb)
+            title = "Basketball"
         }
         
     }

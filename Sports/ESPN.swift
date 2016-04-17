@@ -88,10 +88,6 @@ class ESPN {
     }
     
     static func getCurrentGames(sport: String, callback: ([String: String]?) -> ()) {
-        if sport == "mlb" {
-            callback(["360416125": "Test"])
-            return
-        }
         let url = "http://scores.espn.go.com/aggregator/cached/tea/feed"
         NSURLSession.sharedSession().dataTaskWithURL(NSURL(string: url)!, completionHandler: {(data, response, error) -> Void in
             if error == nil && data != nil {

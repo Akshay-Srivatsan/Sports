@@ -14,6 +14,7 @@ class WebViewController: UIViewController, UIWebViewDelegate {
     
     var html: String?
     var history: [String] = []
+    var titleHistory: [String] = []
     var whichSport: String?
     
     let STYLE = "<style>* {font-family: sans-serif}</style>";
@@ -48,13 +49,16 @@ class WebViewController: UIViewController, UIWebViewDelegate {
             if component == "APEIRON_GO_BACK" {
                 if history.count > 0 {
                     html = history.popLast()
+                    title = titleHistory.popLast()
                     web_view.loadHTMLString(html!, baseURL: nil)
                 }
             }
             if var newHTML = ESPN.getDescription(whichSport!, title: component) {
-                newHTML = STYLE + newHTML + "<br/><br/><a href=\"APEIRON_GO_BACK\">Go Back</a>"
+                newHTML = STYLE + newHTML + "<br/><br/><a href=\"APEIRON_GO_BACK\">Back to \"\(title!)\"</a>"
                 history.append(html!)
+                titleHistory.append(title!)
                 html = newHTML
+                title = component
                 web_view.loadHTMLString(html!, baseURL: nil)
             }
         }
