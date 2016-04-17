@@ -8,19 +8,28 @@
 
 import UIKit
 
-class GameFeedTableViewController: UITableViewController {
+class GameFeedTableViewController: UITableViewController
+{
+    @IBOutlet var table_view: UITableView!
 
-    override func viewDidLoad() {
+    var whichSport: Int?
+    var jsonInfo: [AnyObject]?
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        ESPN.getJSONForSport(whichSport!, callback: cb)
+    }
+    
+    func cb(arr: [AnyObject]?)
+    {
+        jsonInfo = arr;
+        //print(jsonInfo)
+        table_view.reloadData()
     }
 
-    override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
@@ -29,12 +38,12 @@ class GameFeedTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return jsonInfo?.count ?? 0
     }
 
     /*
