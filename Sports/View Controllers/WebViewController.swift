@@ -19,6 +19,7 @@ class WebViewController: UIViewController, UIWebViewDelegate {
 
         // Do any additional setup after loading the view.
         web_view.loadHTMLString(html!, baseURL: nil)
+        web_view.delegate = self;
         //print(html!)
     }
 
@@ -35,6 +36,14 @@ class WebViewController: UIViewController, UIWebViewDelegate {
     
     func webViewDidFinishLoad(webView: UIWebView) {
         UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+    }
+    
+    func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+        if let component = request.URL!.lastPathComponent {
+            html = ESPN.getDescription("mlb", title: component)
+            web_view.loadHTMLString(html!, baseURL: nil)
+        }
+        return true;
     }
     
 
