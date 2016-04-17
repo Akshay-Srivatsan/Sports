@@ -54,6 +54,9 @@ class WebViewController: UIViewController, UIWebViewDelegate {
                 }
             }
             if var newHTML = ESPN.getDescription(whichSport!, title: component) {
+                if let imageData = ESPN.getImage(whichSport!, title: component) {
+                    newHTML += imageData
+                }
                 newHTML = STYLE + newHTML + "<br/><br/><a href=\"APEIRON_GO_BACK\">Back to \"\(title!)\"</a>"
                 history.append(html!)
                 titleHistory.append(title!)
