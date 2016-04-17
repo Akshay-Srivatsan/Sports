@@ -40,8 +40,11 @@ class WebViewController: UIViewController, UIWebViewDelegate {
     
     func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
         if let component = request.URL!.lastPathComponent {
-            html = ESPN.getDescription("mlb", title: component)
-            web_view.loadHTMLString(html!, baseURL: nil)
+            if let html = ESPN.getDescription("mlb", title: component) {
+                web_view.loadHTMLString(html, baseURL: nil)
+            } else {
+//                web_view.loadHTMLString("We do not have a definition for that at this time.", baseURL: nil)
+            }
         }
         return true;
     }

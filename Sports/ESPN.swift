@@ -129,15 +129,15 @@ class ESPN {
         return retval;
     }
     
-    static func getDescription(sport: String, title: String) -> String {
+    static func getDescription(sport: String, title: String) -> String? {
         if !terms.contains(title) {
-            return "Unfortunately, we do not have a definition for that term at this time.";
+            return nil
         }
         else {
             if let definition = definitions[title] {
                 return addLinks(definition);
             } else {
-                return "Unfortunately, we do not have a definition for that term at this time.";
+                return nil
             }
         }
     }
