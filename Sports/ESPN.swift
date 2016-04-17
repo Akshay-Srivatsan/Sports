@@ -75,7 +75,9 @@ class ESPN {
                     let id = parts[1].componentsSeparatedByString("&mlb_s_count")[0]
                     let namePart = parts[0].componentsSeparatedByString("&mlb_s_right")[0]
                     let name = namePart.substringFromIndex(namePart.rangeOfString("=")!.endIndex).stringByReplacingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
-                    retval.updateValue(name, forKey: id)
+                    if name.rangeOfString("FINAL") == nil {
+                        retval.updateValue(name, forKey: id)
+                    }
                 }
                 callback(retval)
             }
