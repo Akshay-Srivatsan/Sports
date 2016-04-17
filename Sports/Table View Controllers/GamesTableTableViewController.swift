@@ -12,9 +12,11 @@ class GamesTableTableViewController: UITableViewController
 {
     @IBOutlet var table_view: UITableView!
     
-    var jsonInfo: [AnyObject]?
+    var gameData: [String: String]?
     
     var whichSport: Int?
+    
+    var segueRow: Int?
     
     override func viewDidLoad()
     {
@@ -30,14 +32,14 @@ class GamesTableTableViewController: UITableViewController
             print(self.jsonInfo)
         }*/
         
-        ESPN.getJSONForSport(whichSport!, callback: cb)
+        ESPN.getCurrentGames("mlb", callback: cb)
         
     }
     
-    func cb(arr: [AnyObject]?)
+    func cb(dict: [String: String]?)
     {
-        jsonInfo = arr;
-        //print(jsonInfo)
+        gameData = dict
+        print(gameData!)
         table_view.reloadData()
     }
 
@@ -58,7 +60,7 @@ class GamesTableTableViewController: UITableViewController
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         // #warning Incomplete implementation, return the number of rows
-        return jsonInfo?.count ?? 0
+        return gameData?.count ?? 0
     }
 
     
@@ -68,9 +70,9 @@ class GamesTableTableViewController: UITableViewController
         // Configure the cell...
         let row = indexPath.row
        
-        if (row < jsonInfo?.count)
+        if (row < gameData?.count)
         {
-            cell.gameLabel.text = jsonInfo![row]["title"] as? String
+            cell.gameLabel.text = gameData?[Array(gameData!.keys)[row]]
         }
         
         return cell
@@ -81,6 +83,7 @@ class GamesTableTableViewController: UITableViewController
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
+        segueRow = indexPath.row
         performSegueWithIdentifier("showGameFeed", sender: self)
     }
 
@@ -95,6 +98,7 @@ class GamesTableTableViewController: UITableViewController
         {
             let destVC = segue.destinationViewController as! GameFeedTableViewController
             destVC.whichSport = whichSport
+            destVC.eventId = Array(gameData!.keys)[segueRow!]
         }
     }
 

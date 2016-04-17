@@ -14,17 +14,18 @@ class GameFeedTableViewController: UITableViewController
 
     var whichSport: Int?
     var jsonInfo: [AnyObject]?
+    var eventId: String?
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        ESPN.getJSONForSport(whichSport!, callback: cb)
+        ESPN.getJSONForEvent(eventId!, callback: cb)
     }
     
     func cb(arr: [AnyObject]?)
     {
         jsonInfo = arr;
-        //print(jsonInfo)
+        print(jsonInfo!)
         table_view.reloadData()
     }
 
@@ -46,15 +47,19 @@ class GameFeedTableViewController: UITableViewController
         return jsonInfo?.count ?? 0
     }
 
-    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("gameFeedCell", forIndexPath: indexPath) as! GameFeedTableViewCell
 
         // Configure the cell...
+        let row = indexPath.row
+        if (row < jsonInfo?.count ?? 0)
+        {
+            cell.feedLabel.text = jsonInfo![row]["title"] as? String
+        }
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
