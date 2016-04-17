@@ -26,7 +26,10 @@ class GameFeedTableViewController: UITableViewController
     func cb(arr: [AnyObject]?)
     {
         jsonInfo = arr;
-        table_view.reloadData()
+        dispatch_async(dispatch_get_main_queue())
+        {
+            self.table_view.reloadData()
+        }
     }
 
     override func didReceiveMemoryWarning()

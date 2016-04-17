@@ -37,7 +37,10 @@ class GamesTableTableViewController: UITableViewController
     func cb(dict: [String: String]?)
     {
         gameData = dict
-        table_view.reloadData()
+        dispatch_async(dispatch_get_main_queue())
+        {
+            self.table_view.reloadData()
+        }
     }
 
     override func didReceiveMemoryWarning()
