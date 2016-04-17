@@ -25,7 +25,6 @@ class GameFeedTableViewController: UITableViewController
     func cb(arr: [AnyObject]?)
     {
         jsonInfo = arr;
-        print(jsonInfo!)
         table_view.reloadData()
     }
 

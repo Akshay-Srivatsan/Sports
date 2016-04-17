@@ -39,7 +39,6 @@ class GamesTableTableViewController: UITableViewController
     func cb(dict: [String: String]?)
     {
         gameData = dict
-        print(gameData!)
         table_view.reloadData()
     }
 
