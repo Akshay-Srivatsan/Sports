@@ -15,6 +15,7 @@ class GameFeedTableViewController: UITableViewController
     var whichSport: Int?
     var jsonInfo: [AnyObject]?
     var eventId: String?
+    var segueRow: Int?
     
     override func viewDidLoad()
     {
@@ -57,6 +58,14 @@ class GameFeedTableViewController: UITableViewController
         }
 
         return cell
+    }
+    
+    // Mark: - Table view delegate
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        segueRow = indexPath.row
+        performSegueWithIdentifier("showWebView", sender: self)
     }
     
     
