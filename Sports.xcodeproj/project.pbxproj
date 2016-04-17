@@ -11,6 +11,7 @@
 		1818D8251CC2ED4700F19415 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1818D8241CC2ED4700F19415 /* HomeViewController.swift */; };
 		1818D82B1CC2FABF00F19415 /* GamesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1818D82A1CC2FABF00F19415 /* GamesTableViewCell.swift */; };
 		1818D82F1CC3138500F19415 /* GameFeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1818D82E1CC3138500F19415 /* GameFeedTableViewController.swift */; };
+		1818D8321CC33E4D00F19415 /* GameFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1818D8311CC33E4D00F19415 /* GameFeedTableViewCell.swift */; };
 		BA05814A1CC2E3F0009979E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0581491CC2E3F0009979E5 /* AppDelegate.swift */; };
 		BA05814F1CC2E3F0009979E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA05814D1CC2E3F0009979E5 /* Main.storyboard */; };
 		BA0581511CC2E3F0009979E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA0581501CC2E3F0009979E5 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 		1818D8241CC2ED4700F19415 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1818D82A1CC2FABF00F19415 /* GamesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesTableViewCell.swift; sourceTree = "<group>"; };
 		1818D82E1CC3138500F19415 /* GameFeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameFeedTableViewController.swift; sourceTree = "<group>"; };
+		1818D8311CC33E4D00F19415 /* GameFeedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameFeedTableViewCell.swift; sourceTree = "<group>"; };
 		BA0581461CC2E3F0009979E5 /* Sports.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sports.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA0581491CC2E3F0009979E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA05814E1CC2E3F0009979E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				1818D82A1CC2FABF00F19415 /* GamesTableViewCell.swift */,
+				1818D8311CC33E4D00F19415 /* GameFeedTableViewCell.swift */,
 			);
 			path = "Table View Cells";
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 				1818D82F1CC3138500F19415 /* GameFeedTableViewController.swift in Sources */,
 				1818D82B1CC2FABF00F19415 /* GamesTableViewCell.swift in Sources */,
 				BA05815C1CC2FA1D009979E5 /* ESPN.swift in Sources */,
+				1818D8321CC33E4D00F19415 /* GameFeedTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
