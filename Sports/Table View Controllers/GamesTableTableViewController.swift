@@ -8,9 +8,18 @@
 
 import UIKit
 
-class GamesTableTableViewController: UITableViewController {
-
-    var games: [String] = ["49ers v Seahawks", "Packers v Vikings"]
+class GamesTableTableViewController: UITableViewController
+{
+    static let FOOTBALL: Int = 0
+    static let BASKETBALL = 1
+    static let HOCKEY = 2
+    static let SOCCER = 3
+    
+    var whichSport: Int?
+    var footballGames: [String]? = ["49ers v Seahawks", "Packers v Vikings"]
+    var basketballGames: [String]? = ["Warriors v Spurs", "Celtics v Magic"]
+    var hockeyGames: [String]? = ["Sharks v People", "Hockey v Player", "AND ANOTHER GAME"]
+    var soccerGames: [String]? = ["Earthquakes v Real Madrid", "Liverpool v Manchester United"]
     
     override func viewDidLoad()
     {
@@ -40,7 +49,27 @@ class GamesTableTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         // #warning Incomplete implementation, return the number of rows
-        return games.capacity ?? 0
+        if (whichSport == GamesTableTableViewController.FOOTBALL)
+        {
+            return footballGames?.capacity ?? 0
+        }
+        else if (whichSport == GamesTableTableViewController.BASKETBALL)
+        {
+            return basketballGames?.capacity ?? 0
+        }
+        else if (whichSport == GamesTableTableViewController.HOCKEY)
+        {
+            return hockeyGames?.capacity ?? 0
+        }
+        else if (whichSport == GamesTableTableViewController.SOCCER)
+        {
+            return soccerGames?.capacity ?? 0
+        }
+        else
+        {
+            // Error - No sport selected
+            return 0
+        }
     }
 
     
@@ -49,6 +78,23 @@ class GamesTableTableViewController: UITableViewController {
 
         // Configure the cell...
         let row = indexPath.row
+        
+        if (whichSport == GamesTableTableViewController.FOOTBALL)
+        {
+            cell.gameLabel.text = footballGames?[row] ?? "Error"
+        }
+        else if (whichSport == GamesTableTableViewController.BASKETBALL)
+        {
+            cell.gameLabel.text = basketballGames?[row] ?? "Error"
+        }
+        else if (whichSport == GamesTableTableViewController.HOCKEY)
+        {
+            cell.gameLabel.text = hockeyGames?[row] ?? "Error"
+        }
+        else if (whichSport == GamesTableTableViewController.SOCCER)
+        {
+            cell.gameLabel.text = soccerGames?[row] ?? "Error"
+        }
 
         return cell
     }

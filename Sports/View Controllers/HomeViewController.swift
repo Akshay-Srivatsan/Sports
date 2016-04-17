@@ -8,8 +8,32 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController
+{
 
+    @IBAction func footballButtonPressed(sender: AnyObject)
+    {
+        performSegueWithIdentifier("showFootball", sender: HomeViewController.self)
+    }
+    
+    
+    @IBAction func basketballButtonPressed(sender: AnyObject)
+    {
+        performSegueWithIdentifier("showBasketball", sender: HomeViewController.self)
+    }
+    
+    
+    @IBAction func hockeyButtonPressed(sender: AnyObject)
+    {
+        performSegueWithIdentifier("showHockey", sender: HomeViewController.self)
+    }
+    
+    
+    @IBAction func soccerButtonPressed(sender: AnyObject)
+    {
+        performSegueWithIdentifier("showSoccer", sender: HomeViewController.self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,14 +46,31 @@ class HomeViewController: UIViewController {
     }
     
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        let destVC = segue.destinationViewController as! GamesTableTableViewController
+        if (segue.identifier == "showFootball")
+        {
+            destVC.whichSport = GamesTableTableViewController.FOOTBALL
+        }
+        else if (segue.identifier == "showBasketball")
+        {
+            destVC.whichSport = GamesTableTableViewController.BASKETBALL
+        }
+        else if (segue.identifier == "showHockey")
+        {
+            destVC.whichSport = GamesTableTableViewController.HOCKEY
+        }
+        else if (segue.identifier == "showSoccer")
+        {
+            destVC.whichSport = GamesTableTableViewController.SOCCER
+        }
     }
-    */
+    
 
 }
