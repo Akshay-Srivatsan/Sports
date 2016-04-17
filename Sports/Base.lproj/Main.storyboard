@@ -191,10 +191,10 @@
             </objects>
             <point key="canvasLocation" x="1747" y="286"/>
         </scene>
-        <!--View Controller-->
+        <!--Web View Controller-->
         <scene sceneID="iL9-7q-1YT">
             <objects>
-                <viewController id="Pj3-kA-3Gq" sceneMemberID="viewController">
+                <viewController id="Pj3-kA-3Gq" customClass="WebViewController" customModule="Sports" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9LX-Th-0HT"/>
                         <viewControllerLayoutGuide type="bottom" id="UCM-QZ-t4l"/>
@@ -216,6 +216,9 @@
                             <constraint firstAttribute="trailing" secondItem="BF9-yt-me1" secondAttribute="trailing" id="uKe-Li-AjC"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="web_view" destination="BF9-yt-me1" id="RRd-mh-JfY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rQY-jd-xKe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
