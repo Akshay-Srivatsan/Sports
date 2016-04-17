@@ -70,7 +70,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Sports Buddy" id="KUU-zj-4wj" userLabel="Sports Buddy"/>
                     <connections>
-                        <segue destination="kbB-3C-10D" kind="show" identifier="showBaseball" animates="NO" id="Vav-e6-sY6"/>
+                        <segue destination="kbB-3C-10D" kind="show" identifier="showBaseball" id="Vav-e6-sY6"/>
                         <segue destination="kbB-3C-10D" kind="show" identifier="showSoccer" id="keP-nn-vwC"/>
                     </connections>
                 </viewController>
@@ -102,10 +102,10 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="ktB-N0-qu7" firstAttribute="trailing" secondItem="k6x-0a-jY9" secondAttribute="trailingMargin" id="A3R-H5-OWK"/>
-                                        <constraint firstItem="ktB-N0-qu7" firstAttribute="bottom" secondItem="k6x-0a-jY9" secondAttribute="bottomMargin" id="Qsd-UP-3JJ"/>
-                                        <constraint firstItem="ktB-N0-qu7" firstAttribute="top" secondItem="k6x-0a-jY9" secondAttribute="top" id="acg-os-SQr"/>
-                                        <constraint firstItem="ktB-N0-qu7" firstAttribute="leading" secondItem="k6x-0a-jY9" secondAttribute="leadingMargin" id="lNm-gV-gEs"/>
+                                        <constraint firstItem="ktB-N0-qu7" firstAttribute="leading" secondItem="k6x-0a-jY9" secondAttribute="leadingMargin" id="HlU-jQ-i1k"/>
+                                        <constraint firstItem="ktB-N0-qu7" firstAttribute="bottom" secondItem="k6x-0a-jY9" secondAttribute="bottomMargin" id="S2H-GJ-fDs"/>
+                                        <constraint firstItem="ktB-N0-qu7" firstAttribute="trailing" secondItem="k6x-0a-jY9" secondAttribute="trailingMargin" id="cRm-OW-6ip"/>
+                                        <constraint firstItem="ktB-N0-qu7" firstAttribute="top" secondItem="k6x-0a-jY9" secondAttribute="top" id="iAL-jX-khJ"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -122,9 +122,8 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="600"/>
                     <connections>
-                        <outlet property="tableView" destination="wml-3W-WSQ" id="UiO-Tl-gA8"/>
                         <outlet property="table_view" destination="wml-3W-WSQ" id="7Nf-Pr-5mR"/>
-                        <segue destination="8hg-JG-iGf" kind="show" identifier="showGameFeed" animates="NO" id="WlV-9x-nUm"/>
+                        <segue destination="8hg-JG-iGf" kind="show" identifier="showGameFeed" id="WlV-9x-nUm"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vkp-jm-Ucb" userLabel="First Responder" sceneMemberID="firstResponder"/>
