@@ -104,7 +104,7 @@ class ESPN {
                     let rawTerm = text.substringWithRange(matchRange!)
                     text.removeRange(matchRange!)
                     text.removeRange(Range(start: text.startIndex, end: text.startIndex.successor()))
-                    let html = "<a href=\"\(term)\">\(rawTerm)</a>"
+                    let html = "<a href=\"\(term)\">\(rawTerm)</a> "
                     retval += html
                     matched = true
                     break
