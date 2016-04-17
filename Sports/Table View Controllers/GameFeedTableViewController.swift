@@ -57,7 +57,7 @@ class GameFeedTableViewController: UITableViewController
         let row = indexPath.row
         if (row < jsonInfo?.count ?? 0)
         {
-            cell.feedLabel.text = jsonInfo![row]["title"] as? String
+            cell.feedLabel.text = ESPN.fixText(jsonInfo![row]["title"] as? String)
         }
 
         return cell

@@ -25,6 +25,16 @@ class ESPN {
         "nba": ["Two Pointer": "A shot that goes through the basket when shot within or on the three point line.", "Three Pointer": "A shot that goes through the basket when shot from outside the three point line.", "Three Point Line": "An arc around the basketball that marks the minimum distance from which a shot must be taken and made to score three points.", "Free Throw": "Awarded after a shooting foul or after a regular foul when the player's team is in the bonus. Each free throw is worth one point.", "Free Throw Line": "The line from which the free throw shooter must stand behind.", "Personal Foul": "A breach of the rules that concerns illegal personal contact with an opponent. Awarded possession of the ball from out of bounds or, if the team is in the bonus, two free throws.", "Shooting Foul": "A player fouled in the act of shooting. The player receives as many free throws as the point value of the shot he attempted.", "Technical Foul": "Any infraction of the rules penalized as a foul which does not involve physical contact during the course of play between opposing players on the court, most commonly unsportsmanlike conduct.", "Flagrant Foul": "A foul that involves excessive or violent contact that could injure the fouled player", "Assist": "Attributed to a player who passes the ball to a teammate in a way that leads to a score by field goal.", "Rebound": "To grab and rettain possession of the ball after a missed shot.", "Block": "When a defensive player legally deflects a field goal attempt from an offensive player.", "Steal": "To cause a turnover by the opponent by deflecting or catching the ball when on defense.", "Bonus": "If a team commits at least five fouls in a quarter, excepting offensive fouls, each foul including and after the fifth, whether or not it is a shooting foul, will result in two free throws (or three in the case of a shooting foul on a three point shot attempt).", "Foul Out": "If a player commits six fouls in a game, he must immediately be substituted out and may not return for the remainder of the game.", "And One": "When a shooting foul is commited and the shooter still makes the shot, and shooter receives one free throw shot.", "Field Goal": "A shot from anywhere on the floor, not including free throws.", "Turnover": "To lose possession of the ball to the other team.", "Dunk": "To throw the ball into the basket from above the rim.", "Goaltending": "A violation in which a defensive player interferes with a shot when it is on its downward arc or is on or over the rim.", "Jump Ball": "A start or restart in play where the referee throws the ball straight up between two opposing players while all other players stand outside the circle. Used either to start a game, start an overtime period, or to settle a tie-up, where two or more players from opposing teams have equal possession of the ball.", "Shot Clock": "A twenty four second period in which the team with possession must shoot the ball, defined by the ball touching the rim. If the team fails to shoot within twenty four seconds, possession is awarded to the opposing team.", "Buzzer Beater": "A shot that is released from the shooter's hands before the final buzzer (referring to either the shot clock or game clock running out), but goes through the basket after the buzzer.", "Rim": "The round part that defines the perimeter of the basket.", "Backboard": "The Plexiglass rectangle behind the rim. All balls that hit off the backboard (unless the backside) are in play.", "Shot": "An attempt to put the ball through the basket in order to score points.", "Timeout": "A stoppage in play, called for by either a coach or a play. Timeouts can only be called when the team has possession of the ball. Each team has one twenty second timeout per half, and six total full (sixty second) timeouts.", "Screen": "When a player on the attacking team positions his body to physically impede a defending player in order to free up a teammate. Any screen set by a player who is not stationary will be called an offensive foul.", "Substitution": "When a bench player enters the game to replace a player currently in the game. There is no limit to the number of substitutions, and all substitutions must be made during a dead ball situation.", "Layup": "A shot attempt taken near the basket.", "Blocked Shot": "See block.", "Foul": "See personal foul.", "Techincal": "See techincal foul.", "Jumper": "See shot.", "Three Point Jumper": "See three pointer, shot.", "Jumpshot": "See shot.", "Steals": "See steal.", "Assists": "See assist.", "Blocks": "See block.", "Pick": "See screen.", "Enters The Game": "See substitution."]
     ]
     
+    static let replacements = [
+        "&#225;": "á",
+        "&#233;": "é",
+        "&#237;": "í",
+        "&#243;": "ó",
+        "&#250;": "ú",
+        "&#241;": "ñ",
+        "&#227;": "ã",
+    ]
+    
     
     static func getCurrentJSON(callback: [String:AnyObject]? -> ()) {
         NSURLSession.sharedSession().dataTaskWithURL(NSURL(string: "http://scores.espn.go.com/sports/scores/feed")!, completionHandler: {(data, response, error) -> Void in
@@ -100,8 +110,13 @@ class ESPN {
                         for game in (league as! [String: AnyObject])["games"] as! [AnyObject] {
                             let gameData = game as! [String: AnyObject]
                             let id = gameData["gameId"] as! Int
-                            let home = (gameData["home"] as! [String: AnyObject])["name"] as! String
-                            let away = (gameData["away"] as! [String: AnyObject])["name"] as! String
+                            var home = (gameData["home"] as! [String: AnyObject])["name"] as! String
+                            var away = (gameData["away"] as! [String: AnyObject])["name"] as! String
+                            
+                            for (key, value) in replacements {
+                                home = home.stringByReplacingOccurrencesOfString(key, withString: value)
+                                away = away.stringByReplacingOccurrencesOfString(key, withString: value)
+                            }
                             
                             let status = (gameData["status"] as! Int)
                             if (status == 2) {
@@ -176,6 +191,13 @@ class ESPN {
         }
     }
     
+    static func fixText(text: String?) -> String? {
+        var varText = text
+        for (key, value) in replacements {
+            varText = varText?.stringByReplacingOccurrencesOfString(key, withString: value)
+        }
+        return varText
+    }
     
 
 

@@ -79,7 +79,7 @@ class GamesTableTableViewController: UITableViewController
        
         if (row < gameData?.count)
         {
-            cell.gameLabel.text = gameData?[Array(gameData!.keys)[row]]
+            cell.gameLabel.text = ESPN.fixText(gameData?[Array(gameData!.keys)[row]])
         }
         
         return cell
