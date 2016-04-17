@@ -19,34 +19,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJh-2f-JzY">
-                                <rect key="frame" x="265" y="203" width="69" height="30"/>
+                                <rect key="frame" x="266" y="198" width="69" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="OHH-J2-kY5"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Baseball"/>
                                 <connections>
                                     <action selector="baseballButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vn9-H4-odw"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Basketball" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xo0-Y2-6pS">
-                                <rect key="frame" x="257" y="289" width="86" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="86" id="Zlp-0Z-J8H"/>
-                                    <constraint firstAttribute="height" constant="21" id="yuI-Vb-en7"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aK1-Sc-qLo">
+                                <rect key="frame" x="258" y="274" width="84" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Football" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53M-is-hzm">
-                                <rect key="frame" x="267" y="129" width="65" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="v9l-Pe-yZP"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <state key="normal" title="Basketball"/>
+                                <connections>
+                                    <action selector="basketballButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="luw-pk-0B8"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WGA-hF-32C">
-                                <rect key="frame" x="271" y="370" width="57" height="29"/>
+                                <rect key="frame" x="272" y="369" width="57" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="Pmv-LB-8l3"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Soccer"/>
                                 <connections>
@@ -56,22 +51,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="53M-is-hzm" firstAttribute="centerX" secondItem="fJh-2f-JzY" secondAttribute="centerX" id="4rG-po-Su9"/>
-                            <constraint firstItem="fJh-2f-JzY" firstAttribute="top" secondItem="53M-is-hzm" secondAttribute="bottom" constant="53" id="8aB-6v-QYC"/>
-                            <constraint firstItem="fJh-2f-JzY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8mS-TB-Qv1"/>
-                            <constraint firstItem="xo0-Y2-6pS" firstAttribute="centerX" secondItem="fJh-2f-JzY" secondAttribute="centerX" id="Gaw-Oy-JHr"/>
-                            <constraint firstItem="53M-is-hzm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="65" id="PNQ-gd-w3y"/>
-                            <constraint firstItem="xo0-Y2-6pS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="SPz-n3-fGc"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WGA-hF-32C" secondAttribute="bottom" constant="201" id="XbT-z4-aB7"/>
-                            <constraint firstItem="xo0-Y2-6pS" firstAttribute="top" secondItem="fJh-2f-JzY" secondAttribute="bottom" constant="56" id="rbG-Yt-TVw"/>
-                            <constraint firstItem="WGA-hF-32C" firstAttribute="centerX" secondItem="xo0-Y2-6pS" secondAttribute="centerX" id="tM4-DC-aSE"/>
-                            <constraint firstItem="WGA-hF-32C" firstAttribute="top" secondItem="xo0-Y2-6pS" secondAttribute="bottom" constant="60" id="zqZ-CI-T93"/>
+                            <constraint firstItem="WGA-hF-32C" firstAttribute="top" secondItem="aK1-Sc-qLo" secondAttribute="bottom" constant="61" id="EoL-HR-OJE"/>
+                            <constraint firstItem="fJh-2f-JzY" firstAttribute="centerX" secondItem="aK1-Sc-qLo" secondAttribute="centerX" id="V9q-pe-wXi"/>
+                            <constraint firstItem="aK1-Sc-qLo" firstAttribute="top" secondItem="fJh-2f-JzY" secondAttribute="bottom" constant="46" id="Yot-DY-qyp"/>
+                            <constraint firstItem="aK1-Sc-qLo" firstAttribute="centerX" secondItem="WGA-hF-32C" secondAttribute="centerX" id="juf-VC-BQC"/>
+                            <constraint firstItem="fJh-2f-JzY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="134" id="m9Q-5A-EvJ"/>
+                            <constraint firstItem="fJh-2f-JzY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nkR-Me-xJW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Sports Buddy" id="KUU-zj-4wj" userLabel="Sports Buddy"/>
                     <connections>
                         <segue destination="kbB-3C-10D" kind="show" identifier="showBaseball" id="Vav-e6-sY6"/>
                         <segue destination="kbB-3C-10D" kind="show" identifier="showSoccer" id="keP-nn-vwC"/>
+                        <segue destination="kbB-3C-10D" kind="show" identifier="showBasketball" id="2Zf-qn-uMM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -234,6 +226,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="keP-nn-vwC"/>
+        <segue reference="2Zf-qn-uMM"/>
     </inferredMetricsTieBreakers>
 </document>

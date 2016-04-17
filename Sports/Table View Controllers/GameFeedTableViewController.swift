@@ -58,6 +58,8 @@ class GameFeedTableViewController: UITableViewController
         if (row < jsonInfo?.count ?? 0)
         {
             cell.feedLabel.text = jsonInfo![row]["title"] as? String
+            cell.feedLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping
+            cell.feedLabel.numberOfLines = 0
         }
 
         return cell

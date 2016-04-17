@@ -38,6 +38,10 @@ class GamesTableTableViewController: UITableViewController
         {
             ESPN.getCurrentGames(HomeViewController.SOCCER_ID, callback: cb)
         }
+        else if (whichSport == HomeViewController.BASKETBALL_ID)
+        {
+            ESPN.getCurrentGames(HomeViewController.BASKETBALL_ID, callback: cb)
+        }
         
     }
     
@@ -104,7 +108,6 @@ class GamesTableTableViewController: UITableViewController
         if (segue.identifier == "showGameFeed")
         {
             let destVC = segue.destinationViewController as! GameFeedTableViewController
-            //destVC.whichSport = whichSport
             destVC.eventId = Array(gameData!.keys)[segueRow!]
             destVC.whichSport = whichSport;
         }
