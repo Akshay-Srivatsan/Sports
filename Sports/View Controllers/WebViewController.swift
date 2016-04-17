@@ -19,7 +19,7 @@ class WebViewController: UIViewController, UIWebViewDelegate {
 
         // Do any additional setup after loading the view.
         web_view.loadHTMLString(html!, baseURL: nil)
-        print(html!)
+        //print(html!)
     }
 
     override func didReceiveMemoryWarning() {
