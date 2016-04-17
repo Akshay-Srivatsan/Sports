@@ -18,6 +18,7 @@
 		BA0581511CC2E3F0009979E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA0581501CC2E3F0009979E5 /* Assets.xcassets */; };
 		BA0581541CC2E3F0009979E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA0581521CC2E3F0009979E5 /* LaunchScreen.storyboard */; };
 		BA05815C1CC2FA1D009979E5 /* ESPN.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA05815B1CC2FA1D009979E5 /* ESPN.swift */; };
+		BA1AD1321CC3BE9E00907E54 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BA1AD1311CC3BE9E00907E54 /* icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		BA0581531CC2E3F0009979E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA0581551CC2E3F0009979E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA05815B1CC2FA1D009979E5 /* ESPN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ESPN.swift; path = ../ESPN.swift; sourceTree = "<group>"; };
+		BA1AD1311CC3BE9E00907E54 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				BA05814D1CC2E3F0009979E5 /* Main.storyboard */,
 				BA0581501CC2E3F0009979E5 /* Assets.xcassets */,
 				BA0581521CC2E3F0009979E5 /* LaunchScreen.storyboard */,
+				BA1AD1311CC3BE9E00907E54 /* icon.png */,
 				BA0581551CC2E3F0009979E5 /* Info.plist */,
 			);
 			path = Sports;
@@ -173,6 +176,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA1AD1321CC3BE9E00907E54 /* icon.png in Resources */,
 				BA0581541CC2E3F0009979E5 /* LaunchScreen.storyboard in Resources */,
 				BA0581511CC2E3F0009979E5 /* Assets.xcassets in Resources */,
 				BA05814F1CC2E3F0009979E5 /* Main.storyboard in Resources */,
