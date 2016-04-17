@@ -15,6 +15,7 @@ class HomeViewController: UIViewController
     static let BASEBALL_ID = "mlb"
     static let SOCCER_ID = "soccer"
     static let BASKETBALL_ID = "nba"
+    static let HOCKEY_ID = "nhl"
     
     @IBAction func baseballButtonPressed(sender: AnyObject)
     {
@@ -30,6 +31,10 @@ class HomeViewController: UIViewController
         performSegueWithIdentifier("showBasketball", sender: self)
     }
     
+    @IBAction func showHockey(sender: AnyObject) {
+        performSegueWithIdentifier("showHockey", sender: self)
+    }
+   
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -61,6 +66,10 @@ class HomeViewController: UIViewController
         else if (segue.identifier == "showBasketball")
         {
             destVC.whichSport = HomeViewController.BASKETBALL_ID
+        }
+        else if (segue.identifier == "showHockey")
+        {
+            destVC.whichSport = HomeViewController.HOCKEY_ID
         }
     }
     
