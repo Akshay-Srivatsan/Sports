@@ -75,7 +75,7 @@ class ESPN {
                     let json = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! [String:AnyObject]
                     var arr = [AnyObject]()
                     for event in json["comments"] as! [AnyObject] {
-                        if (event["key"] as? String)?.rangeOfString(id) != nil {
+                        if (event["key"] as? String)?.rangeOfString(id) != nil && event["title"] as? String != "Status Update" {
                             arr.append(event);
                         }
                     }

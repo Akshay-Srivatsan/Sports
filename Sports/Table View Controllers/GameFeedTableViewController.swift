@@ -22,7 +22,16 @@ class GameFeedTableViewController: UITableViewController
     {
         super.viewDidLoad()
         ESPN.getJSONForEvent(eventId!, callback: cb)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         timer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: Selector("reloadPlayByPlay"), userInfo: nil, repeats: true)
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        timer.invalidate()
     }
     
     func cb(arr: [AnyObject]?)
