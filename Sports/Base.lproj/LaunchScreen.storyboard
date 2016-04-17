@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -18,20 +18,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sports Pal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PnD-Ci-0x5">
-                                <rect key="frame" x="228" y="105" width="144" height="72"/>
+                                <rect key="frame" x="169" y="103" width="262" height="78"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="144" id="Nq9-1q-ybU"/>
+                                    <constraint firstAttribute="width" constant="262" id="jbT-qZ-a7a"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.86274509799999999" green="0.40000000000000002" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="PnD-Ci-0x5" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="8gH-QB-Rsf"/>
-                            <constraint firstItem="PnD-Ci-0x5" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="85" id="cF8-K2-TFe"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="PnD-Ci-0x5" secondAttribute="bottom" constant="423" id="gsa-CA-QZ3"/>
+                            <constraint firstItem="PnD-Ci-0x5" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="23n-2n-XO2"/>
+                            <constraint firstItem="PnD-Ci-0x5" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="83" id="HGE-SE-ygg"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="PnD-Ci-0x5" secondAttribute="bottom" constant="419" id="ZqT-z9-wms"/>
                         </constraints>
                     </view>
                 </viewController>
