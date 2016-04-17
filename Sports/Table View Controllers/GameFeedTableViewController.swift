@@ -84,6 +84,7 @@ class GameFeedTableViewController: UITableViewController
             // do something with dest view controller and html and the jsonInfo "title"
             let destVC = segue.destinationViewController as! WebViewController
             destVC.html = ESPN.addLinks(whichSport!, inputText: (jsonInfo![segueRow!]["title"] as? String)!)
+            destVC.whichSport = whichSport
         }
     }
     

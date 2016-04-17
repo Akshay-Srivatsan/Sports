@@ -14,11 +14,15 @@ class WebViewController: UIViewController, UIWebViewDelegate {
     
     var html: String?
     var history: [String] = []
+    var whichSport: String?
+    
+    let STYLE = "<style>* {font-family: sans-serif}</style>";
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        html = STYLE + html!
         web_view.loadHTMLString(html!, baseURL: nil)
         web_view.delegate = self;
         //print(html!)
@@ -47,17 +51,11 @@ class WebViewController: UIViewController, UIWebViewDelegate {
                     web_view.loadHTMLString(html!, baseURL: nil)
                 }
             }
-            if var newHTML = ESPN.getDescription(HomeViewController.BASEBALL_ID, title: component) {
-                newHTML += "<br/><br/><a href=\"APEIRON_GO_BACK\">Go Back</a>"
+            if var newHTML = ESPN.getDescription(whichSport!, title: component) {
+                newHTML = STYLE + newHTML + "<br/><br/><a href=\"APEIRON_GO_BACK\">Go Back</a>"
                 history.append(html!)
                 html = newHTML
                 web_view.loadHTMLString(html!, baseURL: nil)
-            } else if var newHTML = ESPN.getDescription(HomeViewController.SOCCER_ID, title: component) {
-                newHTML += "<br/><br/><a href=\"APEIRON_GO_BACK\">Go Back</a>"
-                history.append(html!)
-                html = newHTML
-                web_view.loadHTMLString(html!, baseURL: nil)
-//                web_view.loadHTMLString("We do not have a definition for that at this time.", baseURL: nil)
             }
         }
         return true;
