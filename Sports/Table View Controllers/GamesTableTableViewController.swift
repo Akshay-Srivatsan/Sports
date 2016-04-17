@@ -49,7 +49,7 @@ class GamesTableTableViewController: UITableViewController
         {
             ESPN.getCurrentGames(HomeViewController.HOCKEY_ID, callback: cb)
         }
-        
+        table_view.backgroundColor = UIColor.init(red: 220/255.0, green: 102/255.0, blue: 101/255.0, alpha: 1)
     }
     
     func cb(dict: [String: String]?)
@@ -78,7 +78,7 @@ class GamesTableTableViewController: UITableViewController
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         // #warning Incomplete implementation, return the number of rows
-        return gameData?.count ?? 0
+        return max(gameData?.count ?? 1, 1)
     }
 
     
@@ -91,6 +91,10 @@ class GamesTableTableViewController: UITableViewController
         if (row < gameData?.count)
         {
             cell.gameLabel.text = ESPN.fixText(gameData?[Array(gameData!.keys)[row]])
+        }
+        else
+        {
+            cell.gameLabel.text = "No Games Right Now"
         }
         
         return cell

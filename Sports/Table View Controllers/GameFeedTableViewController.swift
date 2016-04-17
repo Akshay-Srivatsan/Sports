@@ -22,6 +22,7 @@ class GameFeedTableViewController: UITableViewController
     {
         super.viewDidLoad()
         ESPN.getJSONForEvent(eventId!, callback: cb)
+        table_view.backgroundColor = UIColor.init(red: 220/255.0, green: 102/255.0, blue: 101/255.0, alpha: 1)
     }
     
     override func viewDidAppear(animated: Bool) {
