@@ -17,6 +17,7 @@ class GameFeedTableViewController: UITableViewController
     var eventId: String?
     var segueRow: Int?
     var timer = NSTimer()
+    let NO_ACT_FEED = "No Activity Feed Right Now"
     
     override func viewDidLoad()
     {
@@ -63,7 +64,7 @@ class GameFeedTableViewController: UITableViewController
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return jsonInfo?.count ?? 0
+        return max(jsonInfo?.count ?? 1, 1)
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -71,11 +72,15 @@ class GameFeedTableViewController: UITableViewController
 
         // Configure the cell...
         let row = indexPath.row
-        if (row < jsonInfo?.count ?? 0)
+        if (row < jsonInfo?.count)
         {
             cell.feedLabel.text = ESPN.fixText(jsonInfo![row]["title"] as? String)
             cell.feedLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping
             cell.feedLabel.numberOfLines = 0
+        }
+        else
+        {
+            cell.feedLabel.text = NO_ACT_FEED
         }
 
         return cell
@@ -86,7 +91,16 @@ class GameFeedTableViewController: UITableViewController
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
         segueRow = indexPath.row
-        performSegueWithIdentifier("showWebView", sender: self)
+        let cell = tableView.dequeueReusableCellWithIdentifier("gameFeedCell", forIndexPath: indexPath) as! GameFeedTableViewCell
+        if (cell.feedLabel.text != NO_ACT_FEED)
+        {
+            performSegueWithIdentifier("showWebView", sender: self)
+        }
+        else
+        {
+            cell.highlighted = false
+            table_view.reloadData()
+        }
     }
     
     

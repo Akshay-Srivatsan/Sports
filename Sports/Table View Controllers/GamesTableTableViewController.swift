@@ -106,7 +106,17 @@ class GamesTableTableViewController: UITableViewController
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
         segueRow = indexPath.row
-        performSegueWithIdentifier("showGameFeed", sender: self)
+        let cell = tableView.dequeueReusableCellWithIdentifier("gameCell", forIndexPath: indexPath) as! GamesTableViewCell
+        if (cell.gameLabel.text != "No Games Right Now")
+        {
+            performSegueWithIdentifier("showGameFeed", sender: self)
+        }
+        else
+        {
+            cell.highlighted = false
+            table_view.reloadData()
+        }
+        
     }
 
     // MARK: - Navigation
