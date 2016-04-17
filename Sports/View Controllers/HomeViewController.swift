@@ -23,9 +23,9 @@ class HomeViewController: UIViewController
     }
     
     
-    @IBAction func hockeyButtonPressed(sender: AnyObject)
+    @IBAction func baseballButtonPressed(sender: AnyObject)
     {
-        performSegueWithIdentifier("showHockey", sender: HomeViewController.self)
+        performSegueWithIdentifier("showBaseball", sender: HomeViewController.self)
     }
     
     
@@ -62,9 +62,9 @@ class HomeViewController: UIViewController
         {
             destVC.whichSport = GamesTableTableViewController.BASKETBALL
         }
-        else if (segue.identifier == "showHockey")
+        else if (segue.identifier == "showBaseball")
         {
-            destVC.whichSport = GamesTableTableViewController.HOCKEY
+            destVC.whichSport = GamesTableTableViewController.BASEBALL
         }
         else if (segue.identifier == "showSoccer")
         {

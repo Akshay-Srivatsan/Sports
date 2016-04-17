@@ -32,15 +32,8 @@
                                     <action selector="basketballButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NfF-gA-fnv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJh-2f-JzY">
-                                <rect key="frame" x="276" y="320" width="52" height="30"/>
-                                <state key="normal" title="Hockey"/>
-                                <connections>
-                                    <action selector="hockeyButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TwL-OL-Aay"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n4g-Ut-2au">
-                                <rect key="frame" x="277" y="410" width="49" height="30"/>
+                                <rect key="frame" x="276" y="410" width="49" height="30"/>
                                 <state key="normal" title="Soccer"/>
                                 <connections>
                                     <action selector="soccerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7E1-8I-2EW"/>
@@ -52,25 +45,32 @@
                                     <navigationItem title="Sports Explainer" id="gBR-GK-GeW"/>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJh-2f-JzY">
+                                <rect key="frame" x="273" y="318" width="58" height="30"/>
+                                <state key="normal" title="Baseball"/>
+                                <connections>
+                                    <action selector="baseballButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vn9-H4-odw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="n4g-Ut-2au" firstAttribute="top" secondItem="fJh-2f-JzY" secondAttribute="bottom" constant="60" id="1og-FX-Vd5"/>
-                            <constraint firstItem="8qe-Gv-LLu" firstAttribute="trailing" secondItem="fJh-2f-JzY" secondAttribute="trailing" id="7Nl-ms-f2a"/>
-                            <constraint firstItem="gRe-cp-61P" firstAttribute="top" secondItem="8qe-Gv-LLu" secondAttribute="bottom" constant="52" id="9WK-eK-DSJ"/>
-                            <constraint firstItem="fJh-2f-JzY" firstAttribute="centerX" secondItem="n4g-Ut-2au" secondAttribute="centerX" id="FKU-Ag-22r"/>
-                            <constraint firstItem="gRe-cp-61P" firstAttribute="centerX" secondItem="8qe-Gv-LLu" secondAttribute="centerX" id="HXE-v1-2yf"/>
-                            <constraint firstItem="8qe-Gv-LLu" firstAttribute="centerX" secondItem="imv-TY-ZWb" secondAttribute="centerX" id="PpE-z4-NcI"/>
-                            <constraint firstAttribute="trailing" secondItem="imv-TY-ZWb" secondAttribute="trailing" id="bRT-kS-GRG"/>
-                            <constraint firstItem="fJh-2f-JzY" firstAttribute="top" secondItem="gRe-cp-61P" secondAttribute="bottom" constant="60" id="e6g-cw-hD6"/>
-                            <constraint firstItem="imv-TY-ZWb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-3" id="rcb-aw-3HS"/>
-                            <constraint firstItem="imv-TY-ZWb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wSI-Ih-Blm"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="n4g-Ut-2au" secondAttribute="bottom" constant="160" id="yfF-FP-sfN"/>
+                            <constraint firstItem="imv-TY-ZWb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-3" id="91s-gz-Pe3"/>
+                            <constraint firstItem="8qe-Gv-LLu" firstAttribute="centerX" secondItem="imv-TY-ZWb" secondAttribute="centerX" id="MrR-eX-JeQ"/>
+                            <constraint firstItem="n4g-Ut-2au" firstAttribute="top" secondItem="fJh-2f-JzY" secondAttribute="bottom" constant="62" id="Vnp-gH-3qQ"/>
+                            <constraint firstItem="fJh-2f-JzY" firstAttribute="top" secondItem="gRe-cp-61P" secondAttribute="bottom" constant="58" id="XfY-IJ-3VJ"/>
+                            <constraint firstItem="8qe-Gv-LLu" firstAttribute="centerX" secondItem="gRe-cp-61P" secondAttribute="centerX" id="Z3r-Fy-B5c"/>
+                            <constraint firstItem="fJh-2f-JzY" firstAttribute="leading" secondItem="8qe-Gv-LLu" secondAttribute="leading" id="f2a-lA-QD5"/>
+                            <constraint firstItem="imv-TY-ZWb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ilz-gR-C9B"/>
+                            <constraint firstAttribute="trailing" secondItem="imv-TY-ZWb" secondAttribute="trailing" id="lRY-bv-oaU"/>
+                            <constraint firstItem="gRe-cp-61P" firstAttribute="centerX" secondItem="n4g-Ut-2au" secondAttribute="centerX" id="pxd-xZ-ZTt"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="n4g-Ut-2au" secondAttribute="bottom" constant="160" id="q7z-x8-cQE"/>
+                            <constraint firstItem="gRe-cp-61P" firstAttribute="top" secondItem="8qe-Gv-LLu" secondAttribute="bottom" constant="52" id="sH4-N7-0ub"/>
                         </constraints>
                     </view>
                     <connections>
                         <segue destination="kbB-3C-10D" kind="show" identifier="showBasketball" id="nmH-DG-4WC"/>
-                        <segue destination="kbB-3C-10D" kind="show" identifier="showHockey" id="Vav-e6-sY6"/>
+                        <segue destination="kbB-3C-10D" kind="show" identifier="showBaseball" id="Vav-e6-sY6"/>
                         <segue destination="kbB-3C-10D" kind="show" identifier="showSoccer" id="CSP-yM-FjS"/>
                         <segue destination="kbB-3C-10D" kind="show" identifier="showFootball" id="Lxf-Bv-rPj"/>
                     </connections>
@@ -94,7 +94,7 @@
                                 <navigationItem title="Games" id="MUX-Lm-zIf" userLabel="Games">
                                     <barButtonItem key="leftBarButtonItem" title="Cancel" id="hDu-Ek-ePH">
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="5NN-Ky-bCN"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="showHomeVC" id="5NN-Ky-bCN"/>
                                         </connections>
                                     </barButtonItem>
                                 </navigationItem>
@@ -137,8 +137,36 @@
             </objects>
             <point key="canvasLocation" x="1016" y="286"/>
         </scene>
+        <!--Table View Controller-->
+        <scene sceneID="6O8-R9-tJL">
+            <objects>
+                <tableViewController id="8hg-JG-iGf" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="bRv-v1-Z2I">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="cOV-Qx-K0o">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cOV-Qx-K0o" id="Xt9-Gj-h09">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="8hg-JG-iGf" id="KjI-Aq-FXJ"/>
+                            <outlet property="delegate" destination="8hg-JG-iGf" id="bHL-Q9-8Bo"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sna-Vw-LLp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1737" y="316"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Lxf-Bv-rPj"/>
+        <segue reference="Vav-e6-sY6"/>
     </inferredMetricsTieBreakers>
 </document>
