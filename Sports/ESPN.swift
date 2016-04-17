@@ -9,7 +9,7 @@
 import Foundation
 
 class ESPN {
-    func getCurrentJSON(callback: [String:AnyObject]? -> ()) {
+    static func getCurrentJSON(callback: [String:AnyObject]? -> ()) {
         NSURLSession.sharedSession().dataTaskWithURL(NSURL(string: "http://scores.espn.go.com/sports/scores/feed")!, completionHandler: {(data, response, error) -> Void in
             if error == nil && data != nil {
                 do {
@@ -22,7 +22,7 @@ class ESPN {
         }).resume()
     }
     
-    func getJSONForSport(sport: Int, callback: [AnyObject]? -> ()) {
+    static func getJSONForSport(sport: Int, callback: [AnyObject]? -> ()) {
         NSURLSession.sharedSession().dataTaskWithURL(NSURL(string: "http://scores.espn.go.com/sports/scores/feed")!, completionHandler: {(data, response, error) -> Void in
             if error == nil && data != nil {
                 do {
@@ -41,7 +41,7 @@ class ESPN {
         }).resume()
     }
     
-    func getJSONForEvent(id: String, callback: ([AnyObject]?) -> ()) {
+    static func getJSONForEvent(id: String, callback: ([AnyObject]?) -> ()) {
         NSURLSession.sharedSession().dataTaskWithURL(NSURL(string: "http://scores.espn.go.com/sports/scores/feed")!, completionHandler: {(data, response, error) -> Void in
             if error == nil && data != nil {
                 do {
