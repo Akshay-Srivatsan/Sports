@@ -17,7 +17,7 @@ class WebViewController: UIViewController, UIWebViewDelegate {
     var titleHistory: [String] = []
     var whichSport: String?
     
-    let STYLE = "<style>* {font-family: sans-serif; font-size: 14pt} body{background-color: #DC6665; color: white} a {color: #20FFFF}</style>";
+    let STYLE = "<style>* {line-height: 1.5em; font-family: sans-serif; font-size: 16pt} body{background-color: #DC6665; color: white} a {color: #20FFFF}</style>";
     
     override func viewDidLoad() {
         super.viewDidLoad()
